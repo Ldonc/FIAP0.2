@@ -1,0 +1,15 @@
+p{
+    font-family: Copperplate;
+    width: 100%;
+    text-align: center;
+}
+
+#cachorro{
+    display:flex;
+    justify-content:center;
+    width:100%;
+}
+#cachorro img{
+    border-radius: 60%;
+    border: solid 1px black;
+}
