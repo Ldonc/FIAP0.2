@@ -52,3 +52,20 @@ carros = ["up","fox","gol","polo","fusca"]
 s_ou_n = ["sim","não"]
 carro = forca_opcao("Qual carro voce quer?\n->",carros)
 continuar = forca_opcao("Você quer continuar?\n->",s_ou_n)
+
+def mostra_matriz(matriz):
+        for linha in matriz:
+            print(linha)
+        return
+
+def cria_matriz(linhas,colunas):
+    matriz = []
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append(1)
+        matriz.append(linha)
+    return matriz
+
+a = cria_matriz(5,5)
+mostra_matriz(a)

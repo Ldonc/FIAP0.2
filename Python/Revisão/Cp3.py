@@ -50,10 +50,10 @@ else:
     print(f"Este é o valor médio de nossos vinhos {valor_medio}R$")
 
     preco_maior = local_maior(lista_precos)
-    print(f"Este é o valor do nosso vinho mais caro {lista_precos[preco_maior]}R$")
+    print(f"Este é o valor do nosso vinho mais caro R${lista_precos[preco_maior]}")
 
     preco_menor = local_menor(lista_precos)
-    print(f"Este é o valor do nosso vinho mais barato {lista_precos[preco_menor]}R$")
+    print(f"Este é o valor do nosso vinho mais barato R${lista_precos[preco_menor]}")
     
     print(lista_vinhos)
     vinho_escolhido = forca_opcao("Qual vinho você gostaria?\n->",lista_vinhos)
