@@ -17,9 +17,9 @@ for i in range(len(matriz)):
 
 
 def mostra_matriz(matriz):
-        for linha in matriz:
-            print(linha)
-        return
+    for linha in matriz:
+        print(linha)
+    return
 
 def cria_matriz(linhas,colunas):
     matriz = []
