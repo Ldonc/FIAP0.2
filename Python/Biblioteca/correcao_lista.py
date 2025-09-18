@@ -74,3 +74,68 @@ indice_remover = acha_indice(carros['nome'],remover)
 for key in carros.keys():
     carros[key].pop(indice_remover)
 print(carros)
+
+atualizar = forca_opcao("Qual carro você deseja atualizar?",carros['modelo'])
+indice_atualizar = acha_indice(carros['nome'],atualizar)
+for key in carros.keys():
+    carros[key][indice_atualizar] = input(f"Diga o novo {key} do {atualizar}")
+
+
+#Ex07
+frase = "O bispo de Constantinopla é um bom desconstantinopolitanizador. Quem o desconstantinopolitanizar, um bom desconstantinopolitanizador será."
+frase = frase.lower()
+for char in ',.:;?!':
+    frase = frase.replace(char,"")
+print(frase)
+palavras = frase.split(' ')
+contador = {}
+for palavra in palavras:
+    if palavra not in contador.keys():
+        contador[palavras] = 1
+    else:
+        contador[palavras] += 1
+
+
+#Ex08
+numeros ={
+    'zero' : '0',
+    'três' : '3',
+    'nove' : '9',
+
+}
+frase = "Eu tenho aula na sala nove zero três"
+for key in numeros.keys():
+    frase = frase.replace(key+' ', numeros[key])
+    frase = frase.replace(key,numeros[key])
+print(frase)
+
+
+#Ex09
+dic_1 = {
+    'a' : 10,
+    'b' : 20,
+    'd' : 30,
+}
+dic_2 = {
+    'b' : 10,
+    'c' : 20,
+    'd' : 30,
+}
+
+interseccao_chaves = []
+for key_1 in dic_1.keys():
+    if key_1 in dic_2.keys():
+        interseccao_chaves.append(key_1)
+print(interseccao_chaves)
+
+
+#Ex10
+disjuncao = []
+for key_1 in dic_1.keys():
+    if key_1 not in dic_2.keys():
+        disjuncao.append(key_1)
+
+for key_2 in dic_2.keys():
+    if key_2 not in dic_1.keys():
+        disjuncao.append(key_2)
+print(disjuncao)
