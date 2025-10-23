@@ -47,3 +47,46 @@ for i in range(len(lista)):
     lista[i] = lista[local_menor]
     lista[local_menor] = aux
     print(lista)
+
+
+
+
+def indice_menor(lista):
+    indice = 0
+    for i in range(len(lista)):
+        if lista[i] < lista[indice]:
+            indice = i
+    return indice
+
+def selection_sort(lista):
+    ordenada = []
+    while lista:
+        ind = indice_menor(lista)
+        menor = lista.pop(ind)
+        ordenada.append(menor)
+    return ordenada
+
+def selection_sort_melhorzin(lista):
+    for i in range(len(lista)):
+        ind = indice_menor(lista[i:]) + i
+        aux = lista[i]
+        lista[i] = lista[ind]
+        lista[ind] = aux
+    return
+
+def bubble_sort(lista):
+    for i in range(len(lista)):
+        trocas = 0
+        for j in range(len(lista) - i - 1):
+            if lista[j] > lista[j+1]:
+                aux = lista[j]
+                lista[j] = lista[j+1]
+                lista[j+1] = aux
+                trocas += 1
+        if trocas == 0:
+            break
+    return
+
+lista = [5,0,4,1,2,7,6,3]
+lista = selection_sort(lista)
+print(lista)
